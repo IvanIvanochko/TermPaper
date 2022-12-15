@@ -1,0 +1,136 @@
+.root{
+    -fx-background-color: #f5ca67;
+}
+
+.button{
+    -fx-background-color: #ffb300;
+    -fx-background-radius: 20;
+
+    -fx-border-color:#d29300;
+    -fx-border-radius: 20;
+
+    -fx-transition-duration: 0.8s;
+}
+
+.button:hover{
+    -fx-border-color:#614400;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow( gaussian , #614400 , 5 , 0.1 , 2 , 2 );
+}
+
+.vbox{
+    -fx-background-color: #ffe099;
+}
+
+.hbox{
+    -fx-background-color: #ffe099;
+}
+
+#hboxDB{
+    -fx-padding: 0 0 10 0;
+}
+
+.text-field{
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: #fef7e7;
+    -fx-border-color: #614400;
+    -fx-border-width: 0.3px;
+}
+
+.text-field-error{
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: #fdb6b6;
+    -fx-border-color: #611d00;
+    -fx-border-width: 0.3px;
+}
+
+.label{
+    -fx-text-fill: #614400;
+    -fx-font-family: "Lucida";
+    -fx-font-weight: 800;
+}
+.label-Cabinet{
+    -fx-text-fill: #614400;
+    -fx-font-family: "Lucida";
+    -fx-font-weight: 800;
+    -fx-font-size: 20px;
+}
+.label-error{
+    -fx-text-fill: #fe0505;
+    -fx-font-family: "Lucida";
+    -fx-font-weight: 800;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #fcb000;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #6b4d06;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #ffcf61;
+}
+
+.date-picker .cell {
+    -fx-background-color: white;
+}
+   
+.date-picker .cell:hover {
+    -fx-background-color: #ffcf61;
+}
+   
+
+.date-picker .selected {
+    -fx-background-color: #fcb000;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected:hover {
+    -fx-background-color: #ffcf61;
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+	-fx-background-color: white; /*white*/
+    -fx-background-radius: 7; /*7*/
+	-fx-border-color: #6b4d06; /*#6b4d06*/
+	-fx-border-radius: 7; /*7*/
+}
+.check-box .mark {
+ 	-fx-shape: "M1.73,12.91 8.1,19.28 22.79,4.59 22.79,1.59 8.1,16.28 1.73,9.91";
+}
+.check-box:selected .mark {
+	-fx-background-color: #fef7e7;
+}
+.check-box:selected .box {
+	-fx-background-color: #fcb000;
+}
+
+#box-error .box {
+	-fx-background-color: red; /*white*/
+    -fx-background-radius: 7; /*7*/
+	-fx-border-color: #6b4d06; /*#6b4d06*/
+	-fx-border-radius: 7; /*7*/
+}
+
+#box-error .mark {
+ 	-fx-shape: "M1.73,12.91 8.1,19.28 22.79,4.59 22.79,1.59 8.1,16.28 1.73,9.91";
+}
+#box-error:selected .mark {
+	-fx-background-color: #fef7e7;
+}
+#box-error:selected .box {
+	-fx-background-color: #fcb000;
+}
+
+.text-field-search{
+    -fx-background-image:url('SearchIcon.png');   
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right center;
+}
+
+
+
+   

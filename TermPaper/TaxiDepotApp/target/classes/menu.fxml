@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@main.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu">
+  <tabs>
+    <Tab fx:id="rentCarTab" text="Rent Car">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <TextField fx:id="searchBarTF" onKeyTyped="#searchBar" prefHeight="35.0" prefWidth="470.0" promptText="Search for a car" style="-fx-background-size: 35px;" styleClass="text-field-search">
+                           <HBox.margin>
+                              <Insets bottom="3.0" top="3.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <VBox fillWidth="false" prefWidth="150.0">
+                           <children>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Fuel">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="fuelChB" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Body Type">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="bodyTypeChB" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Brand">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="brandChB" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Transmission">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="transmissionChB" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Model">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="modelChB" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Year">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="yearTF" onKeyTyped="#getPreferencesNums" promptText="YYYY" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Price">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="priceFromTF" onKeyTyped="#getPreferencesNums" promptText="From">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="priceToTF" onKeyTyped="#getPreferencesNums" promptText="To" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Price to rent">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="priceFromToRentTF" onKeyTyped="#getPreferencesNums" promptText="From">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="priceToToRentTF" onKeyTyped="#getPreferencesNums" promptText="To" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Liters per 100 Km">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="litersFromTF" onKeyTyped="#getPreferencesNums" promptText="From">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="litersToTF" onKeyTyped="#getPreferencesNums" promptText="To" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="50.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Acceleration to 100Km/H">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="accelerationFromTF" onKeyTyped="#getPreferencesNums" promptText="From">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="accelerationToTF" onKeyTyped="#getPreferencesNums" promptText="To" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="25.0" text="Unoccupied">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <CheckBox fx:id="unoccupiedCB" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#getCB" prefHeight="25.0" prefWidth="18.0" wrapText="true" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <ScrollPane fx:id="rentCarSP21" HBox.hgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="rentCarVB" alignment="CENTER" fillWidth="false" prefWidth="1063.0" styleClass="vbox" stylesheets="@main.css" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content></Tab>
+    <Tab fx:id="myCabinetTab" text="My Cabinet">
+         <content>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefWidth="1115.0" styleClass="label-Cabinet" text="MY DATA" textAlignment="CENTER">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Label styleClass="label-Cabinet" text="SNP:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="snpL" styleClass="label-Cabinet" text="MY S N P">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label styleClass="label-Cabinet" text="Birth Date:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="birthDateL" prefHeight="30.0" prefWidth="112.0" styleClass="label-Cabinet" text="01-01-1999">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label styleClass="label-Cabinet" text="City:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cityL" prefHeight="30.0" styleClass="label-Cabinet" text="1234567890">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label styleClass="label-Cabinet" text="Phone number:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="phoneNumberL" styleClass="label-Cabinet" text="0981234567">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="renewMyCabinetB" mnemonicParsing="false" onAction="#updateMyCabinet" prefHeight="40.0" prefWidth="150.0" text="Renew my cabinet">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="483.0" right="482.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="rentCarSP1" prefWidth="965.0">
+                           <content>
+                              <VBox fx:id="myRentCarsVB" prefWidth="950.0" styleClass="vbox" stylesheets="@main.css" />
+                           </content>
+                           <HBox.margin>
+                              <Insets left="75.0" right="75.0" />
+                           </HBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content></Tab>
+      <Tab text="Menu">
+         <content>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" stylesheets="@main.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchToMain" prefHeight="100.0" prefWidth="300.0" text="Log out">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="75.0" prefWidth="300.0" text="Exit" />
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
